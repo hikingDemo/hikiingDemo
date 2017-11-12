@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "b4b65840344e16131946600f093f8cfd"
+build_time: [563429886, 573120000]
+inputs:
+  "/Users/apple/Desktop/ios homework/HikingDemo/mapViewController.swift": [9223372036854775807, 0]
+  "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/ViewController.swift": [563371635, 0]
+  "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/AppDelegate.swift": [563371635, 0]
