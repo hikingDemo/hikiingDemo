@@ -13,6 +13,8 @@
 		185635CF1FB1D9730057A0D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185635CE1FB1D9730057A0D0 /* Assets.xcassets */; };
 		185635D21FB1D9730057A0D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185635D01FB1D9730057A0D0 /* LaunchScreen.storyboard */; };
 		185635DA1FB2BCFC0057A0D0 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185635D91FB2BCFC0057A0D0 /* mapViewController.swift */; };
+		185635DC1FB975EC0057A0D0 /* SafariPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185635DB1FB975EC0057A0D0 /* SafariPageViewController.swift */; };
+		185635DE1FB976470057A0D0 /* weatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185635DD1FB976470057A0D0 /* weatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		185635D11FB1D9730057A0D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185635D31FB1D9730057A0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185635D91FB2BCFC0057A0D0 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mapViewController.swift; path = ../mapViewController.swift; sourceTree = "<group>"; };
+		185635DB1FB975EC0057A0D0 /* SafariPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariPageViewController.swift; sourceTree = "<group>"; };
+		185635DD1FB976470057A0D0 /* weatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				185635C71FB1D9730057A0D0 /* AppDelegate.swift */,
 				185635C91FB1D9730057A0D0 /* ViewController.swift */,
 				185635D91FB2BCFC0057A0D0 /* mapViewController.swift */,
+				185635DB1FB975EC0057A0D0 /* SafariPageViewController.swift */,
+				185635DD1FB976470057A0D0 /* weatherViewController.swift */,
 				185635CB1FB1D9730057A0D0 /* Main.storyboard */,
 				185635CE1FB1D9730057A0D0 /* Assets.xcassets */,
 				185635D01FB1D9730057A0D0 /* LaunchScreen.storyboard */,
@@ -142,7 +148,9 @@
 			files = (
 				185635DA1FB2BCFC0057A0D0 /* mapViewController.swift in Sources */,
 				185635CA1FB1D9730057A0D0 /* ViewController.swift in Sources */,
+				185635DE1FB976470057A0D0 /* weatherViewController.swift in Sources */,
 				185635C81FB1D9730057A0D0 /* AppDelegate.swift in Sources */,
+				185635DC1FB975EC0057A0D0 /* SafariPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

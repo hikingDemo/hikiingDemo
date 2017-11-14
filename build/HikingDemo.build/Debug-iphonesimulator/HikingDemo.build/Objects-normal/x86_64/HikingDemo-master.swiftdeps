@@ -1,7 +1,9 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
 options: "b4b65840344e16131946600f093f8cfd"
-build_time: [563429886, 573120000]
+build_time: [563870537, 294285000]
 inputs:
-  "/Users/apple/Desktop/ios homework/HikingDemo/mapViewController.swift": [9223372036854775807, 0]
-  "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/ViewController.swift": [563371635, 0]
+  "/Users/apple/Desktop/ios homework/HikingDemo/mapViewController.swift": [563429883, 0]
+  "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/ViewController.swift": [563845977, 0]
+  "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/weatherViewController.swift": [9223372036854775807, 0]
   "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/AppDelegate.swift": [563371635, 0]
+  "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/SafariPageViewController.swift": [563870443, 0]

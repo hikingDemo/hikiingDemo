@@ -155,8 +155,22 @@ SWIFT_CLASS("_TtC10HikingDemo11AppDelegate")
 @class NSBundle;
 @class NSCoder;
 
+SWIFT_CLASS("_TtC10HikingDemo24SafariPageViewController")
+@interface SafariPageViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIButton;
+
 SWIFT_CLASS("_TtC10HikingDemo14ViewController")
 @interface ViewController : UIViewController
+- (IBAction)mapPageBtn:(UIButton * _Nonnull)sender;
+- (IBAction)weatherPageBtn:(UIButton * _Nonnull)sender;
+- (IBAction)safariPageBtn:(UIButton * _Nonnull)sender;
+- (IBAction)sosPageBtn:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -166,6 +180,15 @@ SWIFT_CLASS("_TtC10HikingDemo14ViewController")
 
 SWIFT_CLASS("_TtC10HikingDemo17mapViewController")
 @interface mapViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10HikingDemo21weatherViewController")
+@interface weatherViewController : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
