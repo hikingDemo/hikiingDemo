@@ -1,38 +1,27 @@
 //
-//  mapViewController.swift
+//  hkViewController.swift
 //  HikingDemo
 //
-//  Created by apple on 8/11/2017.
+//  Created by apple on 16/11/2017.
 //  Copyright © 2017年 PeterWong. All rights reserved.
 //
 
 import UIKit
 
-class mapViewController: UIViewController {
+class hkViewController: UIViewController {
+
+    @IBOutlet weak var hkCover: UIImageView!
     
-    @IBAction func mlhMainBtn(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "mlhDetailClick", sender: nil)
-    }
+    @IBOutlet weak var hkScrollView: UIScrollView!
     
-    @IBAction func wysMainBtn(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "wysDetailClick", sender: nil)
-    }
+    @IBOutlet weak var hkTextView: UITextView!
     
-    @IBAction func hkMainBtn(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "hkDetailClick", sender: nil)
-    }
+    @IBOutlet weak var hkMapView: UIImageView!
     
-    @IBAction func fwMainBtn(_ sender: UIButton) {
-         self.performSegue(withIdentifier: "fwDetailClick", sender: nil)
-    }
-    
-    @IBAction func gpsMainBtn(_ sender: UIButton) {
-         self.performSegue(withIdentifier: "gpsDetailClick", sender: nil)
-    }
-    
-    @IBAction func backToMainPageBtn(_ sender: UIButton) {
+    @IBAction func hkViewBackBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

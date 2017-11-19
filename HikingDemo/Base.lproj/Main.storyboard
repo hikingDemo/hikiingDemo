@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,17 +29,16 @@
                                 <state key="normal" title="Weather"/>
                                 <connections>
                                     <action selector="weatherPageBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ckI-3Q-oZN"/>
-                                    <segue destination="goj-M7-jxJ" kind="presentation" identifier="weatherClick" id="nfn-eL-JdY"/>
+                                    <segue destination="goj-M7-jxJ" kind="presentation" identifier="" id="nfn-eL-JdY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR2-Y1-SkU">
-                                <rect key="frame" x="16" y="155" width="343" height="125"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-7p-bZa">
+                                <rect key="frame" x="85" y="177" width="204" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Map"/>
+                                <state key="normal" title="遠足徑"/>
                                 <connections>
-                                    <action selector="mapPageBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="huj-oZ-yei"/>
-                                    <segue destination="AK1-uw-QTw" kind="presentation" identifier="mapClick" id="kKt-fk-MCf"/>
+                                    <segue destination="AK1-uw-QTw" kind="presentation" identifier="mapClick" id="v2a-v2-QQx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,28 +67,10 @@
             </objects>
             <point key="canvasLocation" x="815" y="429"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="BbZ-Bh-dqw">
-            <objects>
-                <viewController id="2t7-Kt-eUv" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9tS-cD-AL9"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ek9-ll-mnW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2jw-eH-HB2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LuM-ts-UDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1510" y="-1004"/>
-        </scene>
-        <!--View Controller-->
+        <!--Mlh View Controller-->
         <scene sceneID="Fzq-gK-JsI">
             <objects>
-                <viewController id="psO-6H-gcg" sceneMemberID="viewController">
+                <viewController id="psO-6H-gcg" customClass="mlhViewController" customModule="HikingDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mrB-aR-dKz"/>
                         <viewControllerLayoutGuide type="bottom" id="bMc-81-448"/>
@@ -96,12 +78,328 @@
                     <view key="view" contentMode="scaleToFill" id="Qhu-XS-1ne">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sketch-1510659648213" translatesAutoresizingMaskIntoConstraints="NO" id="FCP-q6-ynd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="Hzz-cn-wI5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gbd-3G-h6E">
+                                <rect key="frame" x="0.0" y="450" width="375" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="Szu-4r-ncW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8u-fg-d6K">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <state key="normal" title="上一頁"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="psO-6H-gcg" eventType="touchUpInside" id="dWT-Qc-0U3"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CJ-lV-au2">
+                                <rect key="frame" x="0.0" y="121" width="375" height="321"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M31-Y6-Z9n">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="330"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="330" id="cO1-R3-S4z"/>
+                                        </constraints>
+                                        <mutableString key="text">麥理浩徑第一段
+
+簡介
+麥理浩徑一段環繞萬宜水庫南部而行，沿途大部分為平坦路徑，經過萬宜水庫西壩發東壩，接近終點處有一個香港地質公園。
+
+難度：4
+
+路線
+北潭路 - 萬宜凹 - 西壩 - 東壩 - 浪茄
+
+需時
+約3小時
+
+長度
+10.6公里
+
+交通
+起點：
+的士
+
+終點：
+1.九巴94：西貢市 - 黃石碼頭(上窰下車)
+2.九巴96R(假日)：鑽石山鐵路站 - 黃石碼頭(上窰下車)
+3.小巴7號線：西貢市 - 海下(上窰下車)
+
+麥理浩徑第二段
+
+簡介
+麥理浩徑二段由浪茄開始，需要攀上陡峭的山路，沿途可觀賞迷人的景色環繞萬宜水庫南部而行，沿途大部分為平坦路徑，經過萬宜水庫西壩發東壩，接近終點處有一個香港地質公園。
+
+難度：3
+
+路線
+浪茄 - 西灣山 - 吹筒坳 - 西灣 - 鹹田灣 - 大浪坳 - 赤徑 - 北潭凹
+
+需時
+約5小時
+
+長度
+13.5公里
+
+交通
+起點：
+1.的士(萬宜水庫東壩下車)
+
+終點：
+1.九巴94：西貢市 - 黃石碼頭
+2.九巴96R(假日)：鑽石山鐵路站 - 黃石碼頭
+3.小巴7：西貢市 - 海下
+
+
+
+
+
+麥理浩徑第三段
+
+簡介
+麥理浩徑第三段跨過北潭凹至企嶺下海之間的山峰，途中可眺望赤徑口、西貢口、企嶺下海等地。
+
+難度：3
+
+路線
+北潭凹 - 牛耳石山 - 嶂上 - 畫眉山 - 鹹田灣 - 雞公山 - 水浪窩
+
+需時
+約4小時
+
+
+長度
+10.2公里
+
+交通
+起點：
+1.九巴94：西貢市 - 黃石碼頭(北潭凹下車)
+2.九巴96R(假日)：鑽石山鐵路站 - 黃石碼頭(北潭凹下車)
+3.小巴7號線：西貢市 - 海下(北潭凹下車)
+
+終點
+1.九巴99：西貢 - 烏溪沙鐵路站
+2.九巴299：西貢 - 沙田市中心
+
+
+
+
+麥理浩徑第四段
+
+簡介
+麥理浩徑第四段跨過馬鞍山郊野公園，是麥理浩徑最困難的路段。
+難度：4
+
+路線
+水浪窩 - 馬鞍山 - 昂平 - 茅坪 - 黃牛山 - 大老山
+
+需時
+約5小時
+
+長度
+12.7公里
+
+交通
+起點：
+1.九巴299：沙水市中心 - 西貢市中心(水浪窩下車)
+2.九巴99：烏溪沙 - 西貢(水浪窩下車)
+
+終點：
+的士
+
+
+
+麥理浩徑第五段
+
+簡介
+麥理浩徑第五段走過九龍山群，是麥理浩徑最近市區的部分，九龍市區石屎森林之景盡在眼前。
+
+難度：3
+
+路線
+大老山 - 沙田坳 - 獅子山 - 筆架山 - 大埔公路 
+
+需時
+約3小時
+
+長度
+10.6公里
+
+交通
+起點：
+的士
+
+終點：
+1.九巴72：太和總站 - 長沙灣
+2.九巴81：禾輋 - 佐敦
+
+
+
+麥理浩徑第六段
+
+簡介
+麥理浩徑第六段途經獼猴群集以及滿佈二戰遺跡的金山，是麥理浩徑較易行的一段。
+
+難度：2
+
+路線
+大埔公路  - 九龍水塘 - 金山 - 城門水塘
+
+需時
+約1.5小時
+
+長度
+4.6公里
+
+交通
+起點：
+1.九巴72：太和總站 - 長沙灣
+2.九巴81：禾輋 - 佐敦
+
+終點
+1.小巴82：荃灣(兆和街) - 城門水塘
+
+
+
+
+麥理浩徑第七段
+
+簡介
+麥理浩徑第七段途經針山、草山，可高處欣賞城門水塘及八仙嶺等地。
+
+難度：4
+
+路線
+城門水塘  - 針山 - 草山 - 鉛礦坳
+
+需時
+約2.5小時
+
+長度
+6.2公里
+
+交通
+起點：
+1.小巴82： - 荃灣(兆和街) - 城門水塘
+
+
+
+
+
+麥理浩徑第八段
+
+簡介
+麥理浩徑第八段跨越香港最高的大帽山，可觀賞遠闊的山景。
+
+難度：4
+
+路線
+鉛礦坳  - 大帽山 - 荃錦公路
+
+需時
+約4小時
+
+長度
+9.7公里
+
+交通
+終點：
+1.九巴51： - 錦上路鐵路站 - 荃灣(如心廣場)
+
+
+
+麥理浩徑第九段
+
+簡介
+麥理浩徑第九段由荃錦凹走王田夫仔，途中可看到深谷中的河背水塘。
+
+難度：2
+
+路線
+荃錦公路  - 大欖林道 - 田夫仔 
+
+需時
+約2.5小時
+
+長度
+6.3公里
+
+交通
+起點：
+1.九巴51： - 錦上路鐵路站 - 城門荃灣如心廣場
+
+
+
+麥理浩徑第十段
+
+簡介
+麥理浩徑第十段位於大欖郊野公園內，經過大欖涌水塘的北部到達屯門，是整條麥理浩徑的最長段落。
+
+難度：3
+
+路線
+田夫仔  - 田夫仔村 - 吉慶橋 - 大欖涌水塘 - 掃管笏 - 屯門
+
+需時
+約5小時
+
+長度
+15.6公里
+
+交通
+終點：
+1.九巴53： - 元朗(東) - 荃灣西鐵站
+2.九巴67M：兆康苑 - 葵芳鐵路站
+3.九巴67X：兆康苑 - 旺角東鐵路站
+
+
+</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="M31-Y6-Z9n" secondAttribute="trailing" id="6Hg-Y7-V8L"/>
+                                    <constraint firstItem="M31-Y6-Z9n" firstAttribute="centerX" secondItem="9CJ-lV-au2" secondAttribute="centerX" id="RnB-OL-bjC"/>
+                                    <constraint firstItem="M31-Y6-Z9n" firstAttribute="top" secondItem="9CJ-lV-au2" secondAttribute="topMargin" id="Smu-Fk-uv5"/>
+                                    <constraint firstItem="M31-Y6-Z9n" firstAttribute="leading" secondItem="9CJ-lV-au2" secondAttribute="leading" id="crb-b8-Ff0"/>
+                                    <constraint firstAttribute="bottom" secondItem="M31-Y6-Z9n" secondAttribute="bottom" constant="-17" id="sUs-pd-gUe"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9CJ-lV-au2" firstAttribute="trailing" secondItem="Gbd-3G-h6E" secondAttribute="trailing" id="8Zm-y2-bBz"/>
+                            <constraint firstItem="9CJ-lV-au2" firstAttribute="leading" secondItem="Gbd-3G-h6E" secondAttribute="leading" id="9uv-8j-tJR"/>
+                            <constraint firstItem="9CJ-lV-au2" firstAttribute="trailing" secondItem="FCP-q6-ynd" secondAttribute="trailing" id="I4w-Yy-5H6"/>
+                            <constraint firstItem="9CJ-lV-au2" firstAttribute="leading" secondItem="Qhu-XS-1ne" secondAttribute="leading" id="UMw-I3-8fA"/>
+                            <constraint firstItem="9CJ-lV-au2" firstAttribute="centerX" secondItem="O8u-fg-d6K" secondAttribute="centerX" id="aSo-oX-KES"/>
+                            <constraint firstItem="FCP-q6-ynd" firstAttribute="top" secondItem="Qhu-XS-1ne" secondAttribute="top" id="aaD-Jx-81i"/>
+                            <constraint firstItem="O8u-fg-d6K" firstAttribute="top" secondItem="Gbd-3G-h6E" secondAttribute="bottom" constant="19" id="cBG-cr-QD6"/>
+                            <constraint firstItem="Gbd-3G-h6E" firstAttribute="top" secondItem="9CJ-lV-au2" secondAttribute="bottom" constant="8" symbolic="YES" id="nAo-KF-aos"/>
+                            <constraint firstAttribute="trailing" secondItem="9CJ-lV-au2" secondAttribute="trailing" id="nZ2-5H-c0v"/>
+                            <constraint firstItem="9CJ-lV-au2" firstAttribute="top" secondItem="mrB-aR-dKz" secondAttribute="bottom" constant="101" id="udf-kf-RdA"/>
+                            <constraint firstAttribute="bottom" secondItem="9CJ-lV-au2" secondAttribute="bottom" constant="225" id="xd9-03-42z"/>
+                            <constraint firstItem="9CJ-lV-au2" firstAttribute="leading" secondItem="FCP-q6-ynd" secondAttribute="leading" id="zS5-X9-gkZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mlhCoverView" destination="FCP-q6-ynd" id="8bA-Bh-wvr"/>
+                        <outlet property="mlhMapView" destination="Gbd-3G-h6E" id="HTB-sS-qrD"/>
+                        <outlet property="mlhScrollView" destination="9CJ-lV-au2" id="UdE-Ca-ibg"/>
+                        <outlet property="mlhTextView" destination="M31-Y6-Z9n" id="P19-1Y-7uF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFa-Cl-Cpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="-1004"/>
+            <point key="canvasLocation" x="-103.2" y="-1004.3478260869566"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="bsm-1V-bdn">
@@ -116,39 +414,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-2f-ubm">
-                                <rect key="frame" x="16" y="213" width="343" height="82"/>
+                                <rect key="frame" x="16" y="255" width="343" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="麥理浩徑"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnX-XO-qId">
-                                <rect key="frame" x="16" y="288" width="343" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="衛奕信徑"/>
+                                <connections>
+                                    <segue destination="psO-6H-gcg" kind="presentation" identifier="mlhDetailClick" id="JW6-gx-bNr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb6-VZ-LZF">
-                                <rect key="frame" x="16" y="369" width="343" height="82"/>
+                                <rect key="frame" x="16" y="382" width="343" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="港島徑"/>
+                                <connections>
+                                    <action selector="hkMainBtn:" destination="AK1-uw-QTw" eventType="touchUpInside" id="jUI-HM-CNM"/>
+                                    <segue destination="VnL-vh-1S1" kind="presentation" identifier="hkDetailClick" id="n5a-zc-VDX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwj-Rr-u9M">
-                                <rect key="frame" x="16" y="443" width="343" height="96"/>
+                                <rect key="frame" x="16" y="435" width="343" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="鳳凰徑"/>
+                                <connections>
+                                    <action selector="fwMainBtn:" destination="AK1-uw-QTw" eventType="touchUpInside" id="yHQ-bD-kwa"/>
+                                    <segue destination="p2G-xz-U6a" kind="presentation" identifier="fwDetailClick" id="Qrr-y6-9bW"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ne-EJ-gcT">
-                                <rect key="frame" x="16" y="526" width="343" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="GPS"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sketch-1510659648213" translatesAutoresizingMaskIntoConstraints="NO" id="pdz-yo-tdy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="遠足" translatesAutoresizingMaskIntoConstraints="NO" id="pdz-yo-tdy">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ne-EJ-gcT">
+                                <rect key="frame" x="16" y="493" width="343" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="GPS"/>
+                                <connections>
+                                    <action selector="gpsMainBtn:" destination="AK1-uw-QTw" eventType="touchUpInside" id="1hM-5X-cdK"/>
+                                    <segue destination="4ea-25-u4Q" kind="presentation" identifier="gpsDetailClick" id="rmQ-ij-N4n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNA-X3-lrZ">
+                                <rect key="frame" x="16" y="551" width="343" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="上一頁"/>
+                                <connections>
+                                    <action selector="backToMainPageBtn:" destination="AK1-uw-QTw" eventType="touchUpInside" id="vBh-KK-YFq"/>
+                                    <action selector="gpsMainBtn:" destination="AK1-uw-QTw" eventType="touchUpInside" id="599-1s-OLZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnX-XO-qId">
+                                <rect key="frame" x="16" y="315" width="343" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="衛奕信徑"/>
+                                <connections>
+                                    <action selector="wysMainBtn:" destination="AK1-uw-QTw" eventType="touchUpInside" id="b1c-jO-8EJ"/>
+                                    <segue destination="F8K-sh-8Oo" kind="presentation" identifier="wysDetailClick" id="euH-GV-seo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -157,10 +484,10 @@
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="-279.31034482758622"/>
         </scene>
-        <!--View Controller-->
+        <!--Gps View Controller-->
         <scene sceneID="aT5-bG-9xH">
             <objects>
-                <viewController id="4ea-25-u4Q" sceneMemberID="viewController">
+                <viewController id="4ea-25-u4Q" customClass="gpsViewController" customModule="HikingDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RXq-UC-UTe"/>
                         <viewControllerLayoutGuide type="bottom" id="6Nh-9x-Yuz"/>
@@ -168,51 +495,927 @@
                     <view key="view" contentMode="scaleToFill" id="xuw-SS-T1V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Osh-4x-WSR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qO-Nk-qeg">
+                                <rect key="frame" x="161.5" y="538" width="51.5" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="QeQ-Fh-W5G"/>
+                                    <constraint firstAttribute="width" constant="51.5" id="TOu-Sy-eEO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Osh-4x-WSR" secondAttribute="trailing" id="6al-RX-MmR"/>
+                            <constraint firstItem="6Nh-9x-Yuz" firstAttribute="top" secondItem="8qO-Nk-qeg" secondAttribute="bottom" constant="50" id="C7s-MW-Ciu"/>
+                            <constraint firstItem="8qO-Nk-qeg" firstAttribute="centerX" secondItem="xuw-SS-T1V" secondAttribute="centerX" id="GBk-HO-Rva"/>
+                            <constraint firstItem="6Nh-9x-Yuz" firstAttribute="top" secondItem="Osh-4x-WSR" secondAttribute="bottom" id="g43-uk-v1L"/>
+                            <constraint firstItem="Osh-4x-WSR" firstAttribute="top" secondItem="RXq-UC-UTe" secondAttribute="bottom" id="qV2-E2-abd"/>
+                            <constraint firstItem="Osh-4x-WSR" firstAttribute="leading" secondItem="xuw-SS-T1V" secondAttribute="leading" id="ybv-4v-kgC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Osh-4x-WSR" id="U3J-Jf-DYM"/>
+                        <outlet property="statusLabel" destination="8qO-Nk-qeg" id="3MZ-DM-Htq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvS-d5-h8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731" y="-269"/>
+            <point key="canvasLocation" x="1730.4000000000001" y="-269.41529235382313"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="d2n-kp-R8C">
+        <!--Wys View Controller-->
+        <scene sceneID="Rj3-1l-tIq">
             <objects>
-                <viewController id="JbA-oC-9en" sceneMemberID="viewController">
+                <viewController id="F8K-sh-8Oo" customClass="wysViewController" customModule="HikingDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2fQ-7C-Rw4"/>
-                        <viewControllerLayoutGuide type="bottom" id="eqd-1A-TR3"/>
+                        <viewControllerLayoutGuide type="top" id="qYp-3s-HLA"/>
+                        <viewControllerLayoutGuide type="bottom" id="z7R-kK-b3b"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7E6-wz-1qK">
+                    <view key="view" contentMode="scaleToFill" id="DsE-nM-uL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="衛奕信cover" translatesAutoresizingMaskIntoConstraints="NO" id="JkO-fc-H1K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="EmV-N2-ysR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-py-GqJ">
+                                <rect key="frame" x="0.0" y="450" width="375" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="H9F-9O-o11"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUK-c5-mNB">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <state key="normal" title="上一頁"/>
+                                <connections>
+                                    <action selector="wysBackBtn:" destination="F8K-sh-8Oo" eventType="touchUpInside" id="zmo-8q-FEp"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNB-zg-lLV">
+                                <rect key="frame" x="0.0" y="121" width="375" height="321"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SrI-AH-c9n">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="330"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="330" id="otg-Se-E2i"/>
+                                        </constraints>
+                                        <mutableString key="text">衛奕信徑一段
+
+簡介
+衛奕信徑一段開始使要登上漫長的登山徑。站在山頂，可以欣賞到淺水灣、深水灣等地美景。
+
+難度：3
+
+路線
+赤柱峽道  - 孖崗山 - 淺水灣坳 - 紫羅蘭山 - 陽明山莊 
+
+需時
+約2小時
+
+長度
+4.8公里
+
+交通
+起點：
+1.城巴6：中環(交易廣場) - 赤柱監獄(衛奕信徑下車) 
+2.城巴6A：中環(交易廣場) - 赤柱炮台 閘口(衛奕信徑下車) 
+
+終點：
+1.中環(交易廣場) - 赤柱監獄
+
+
+
+
+衛奕信徑二段
+
+簡介
+衛奕信徑二段途經渣甸山徑，可欣賞到大潭谷水塘以及繁華鬧市之景。
+
+難度：3
+
+路線
+陽明山莊 - 渣甸山 - 小馬山 - 鰂魚涌
+
+需時
+約2.5小時
+
+長度
+6.6公里
+
+交通
+起點：
+1.城巴6：中環(交易廣場) - 赤柱監獄(黃泥涌水塘公園下車) 
+
+終點：
+1.港鐵 太古站
+
+
+
+
+
+衛奕信徑三段
+
+簡介
+衛奕信徑三段與二段相隔一個維多利亞港。三段途大經過魔鬼山，山頂有一個古老的碉堡遺蹟，這裡可·欣賞到維港兩岸的景色。
+
+難度：3
+
+
+路線
+油塘鐵路站 - 魔鬼山 - 五桂山 - 馬游塘 - 井欄樹村
+
+需時
+約4小時
+
+長度
+9.3公里
+
+交通
+起點：
+港鐵 油塘站
+
+終點：
+九巴91：清水灣 - 鑽石山鐵路站
+
+
+
+衛奕信徑四段
+
+簡介
+衛奕信徑四段途經西貢古道，登上飛鵝山道，可飽覽九龍市區景觀。
+
+難度：3
+
+路線
+井欄樹村 - 黃麍仔 - 大籃湖 - 飛鵝山道 - 沙田坳道 - 沙田坳 
+
+需時
+約3小時
+
+長度
+8公里
+
+交通
+起點：
+1.九巴91： 清水灣 - 鑽石山鐵路站
+2.九巴91M：寶琳 - 鑽石山鐵路站
+
+終點：
+九巴3C：中港碼頭 - 慈雲山(北)
+
+
+
+
+
+衛奕信徑五段
+
+簡介
+衛奕信徑五段經過獅子山郊野公園，途中經過著名的望夫石。
+
+難度：2
+
+路線
+沙田坳 - 望夫石 - 九龍水塘
+
+需時
+約2.5小時
+
+長度
+7.4公里
+
+交通
+起點：
+1.九巴3C ： 中港碼頭 - 慈雲山(北)
+
+終點：
+1.九巴72：長沙灣 - 太和
+2.九巴81：佐敦 - 禾輋
+
+
+
+
+
+衛奕信徑六段
+
+簡介
+衛奕信徑六段途經九龍水塘、石梨貝水塘及城門水塘
+
+難度：3
+
+路線
+九龍水塘 - 金山家樂徑 - 金山路 - 孖指徑 - 城門水塘
+
+需時
+約2小時
+
+長度
+5.3公里
+
+交通
+
+起點：
+1.九巴72：長沙灣 - 太和
+2.九巴81：佐敦 - 禾輋
+
+終點：
+1.小巴82：荃灣 - 城門水塘
+
+
+
+
+衛奕信徑七段
+
+簡介
+衛奕信徑七段途經半個城門水塘，沿途除了可飽覽水塘風光外·，亦可欣賞到城門標本林。
+
+難度：2
+
+路線
+城門水塘 - 鉛礦坳 - 元墩下
+
+需時
+約4小時
+
+長度
+10.2公里
+
+交通
+
+起點：
+1.小巴82：荃灣 - 城門水塘
+
+終點：
+小巴23S：打鐵坳 - 大埔墟
+
+
+
+
+衛奕信徑八段
+
+簡介
+衛奕信徑八段經過大埔市區，然後登上九龍坑山。
+
+難度：4
+
+路線
+元墩下 - 半春園 - 大埔市區 - 大埔頭徑 - 九龍坑山
+
+需時
+約4小時
+
+長度
+9公里
+
+交通
+起點：
+小巴23S：打鐵坳 - 大埔墟
+
+
+
+
+
+衛奕信徑九段
+
+簡介
+第九段由九龍坑山開始，進入八仙嶺郊野公園，可欣賞到新界東北景觀，本段是衛奕信徑最長的一段。
+
+難度：4
+
+路線
+九龍坑山 - 鶴藪水塘 - 屏風山 - 黃嶺 - 犁壁山 - 純陽峰 - 八仙嶺 - 仙姑峰
+
+需時
+約4.5小時
+
+長度
+10.6公里
+
+交通
+無
+
+
+
+
+衛奕信徑十段
+
+簡介
+第十段由仙姑峰下行至南涌，沿途可欣賞到烏蛟騰以至沙頭角的景觀。
+
+難度：3
+
+路線
+仙姑峰 - 橫山腳下村 - 橫山腳上村道 - 上七木橋 - 下七木橋 - 南涌
+
+需時
+約2.5小時
+
+長度
+6.8公里
+
+交通
+終點：
+小巴56K：粉嶺鐵路站 - 鹿頸
+
+</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SrI-AH-c9n" secondAttribute="trailing" id="AUh-pa-idc"/>
+                                    <constraint firstAttribute="bottom" secondItem="SrI-AH-c9n" secondAttribute="bottom" constant="-17" id="GIc-Ax-a4G"/>
+                                    <constraint firstItem="SrI-AH-c9n" firstAttribute="leading" secondItem="GNB-zg-lLV" secondAttribute="leading" id="NH3-fh-ecs"/>
+                                    <constraint firstItem="SrI-AH-c9n" firstAttribute="centerX" secondItem="GNB-zg-lLV" secondAttribute="centerX" id="dir-Dg-l9a"/>
+                                    <constraint firstItem="SrI-AH-c9n" firstAttribute="top" secondItem="GNB-zg-lLV" secondAttribute="topMargin" id="elo-Gd-FHZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GNB-zg-lLV" firstAttribute="leading" secondItem="5oZ-py-GqJ" secondAttribute="leading" id="DFP-Qk-MKi"/>
+                            <constraint firstItem="GNB-zg-lLV" firstAttribute="trailing" secondItem="JkO-fc-H1K" secondAttribute="trailing" id="G2F-ti-enh"/>
+                            <constraint firstItem="cUK-c5-mNB" firstAttribute="top" secondItem="5oZ-py-GqJ" secondAttribute="bottom" constant="19" id="HBx-TW-19Y"/>
+                            <constraint firstItem="JkO-fc-H1K" firstAttribute="top" secondItem="DsE-nM-uL3" secondAttribute="top" id="M7C-LZ-fIB"/>
+                            <constraint firstItem="GNB-zg-lLV" firstAttribute="leading" secondItem="JkO-fc-H1K" secondAttribute="leading" id="Odl-g7-Msx"/>
+                            <constraint firstItem="GNB-zg-lLV" firstAttribute="trailing" secondItem="5oZ-py-GqJ" secondAttribute="trailing" id="QIG-se-Zh3"/>
+                            <constraint firstAttribute="trailing" secondItem="GNB-zg-lLV" secondAttribute="trailing" id="SHu-ep-jG9"/>
+                            <constraint firstItem="5oZ-py-GqJ" firstAttribute="top" secondItem="GNB-zg-lLV" secondAttribute="bottom" constant="8" symbolic="YES" id="VXQ-RE-dN6"/>
+                            <constraint firstItem="GNB-zg-lLV" firstAttribute="leading" secondItem="DsE-nM-uL3" secondAttribute="leading" id="bi0-wf-htG"/>
+                            <constraint firstItem="GNB-zg-lLV" firstAttribute="top" secondItem="qYp-3s-HLA" secondAttribute="bottom" constant="101" id="iFi-4e-HhT"/>
+                            <constraint firstItem="GNB-zg-lLV" firstAttribute="centerX" secondItem="cUK-c5-mNB" secondAttribute="centerX" id="laC-nm-kfp"/>
+                            <constraint firstAttribute="bottom" secondItem="GNB-zg-lLV" secondAttribute="bottom" constant="225" id="ldb-nu-Mat"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="wysCover" destination="JkO-fc-H1K" id="rtm-OP-4Ob"/>
+                        <outlet property="wysMapView" destination="5oZ-py-GqJ" id="jRx-Zg-SRm"/>
+                        <outlet property="wysScrollView" destination="GNB-zg-lLV" id="nPb-vY-Wvg"/>
+                        <outlet property="wysTextView" destination="SrI-AH-c9n" id="sXT-wC-cud"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JD0-G7-V1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INI-MS-9ud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="761" y="-1004"/>
+            <point key="canvasLocation" x="634" y="-1004"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ytk-5e-440">
+        <!--Hk View Controller-->
+        <scene sceneID="4rv-ke-sPe">
             <objects>
-                <viewController id="v5j-ZA-Nc2" sceneMemberID="viewController">
+                <viewController id="VnL-vh-1S1" customClass="hkViewController" customModule="HikingDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1JM-ho-DJy"/>
-                        <viewControllerLayoutGuide type="bottom" id="c9T-hU-75R"/>
+                        <viewControllerLayoutGuide type="top" id="X3R-fD-Yfp"/>
+                        <viewControllerLayoutGuide type="bottom" id="A3r-9T-nCt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qCF-za-hgl">
+                    <view key="view" contentMode="scaleToFill" id="kUl-9X-daU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image004" translatesAutoresizingMaskIntoConstraints="NO" id="uRj-Kq-IVr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="lwU-HB-R2r"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X42-W6-fxe">
+                                <rect key="frame" x="0.0" y="450" width="375" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="bT8-Ho-K79"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Boj-H3-7tU">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <state key="normal" title="上一頁"/>
+                                <connections>
+                                    <action selector="hkViewBackBtn:" destination="VnL-vh-1S1" eventType="touchUpInside" id="Qbf-sW-23D"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YoK-lP-wKa">
+                                <rect key="frame" x="0.0" y="121" width="375" height="321"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tcQ-qc-v9x">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="330"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="330" id="CLm-PC-oGN"/>
+                                        </constraints>
+                                        <mutableString key="text">港島徑一段
+
+港島徑一段由大平山山腰出發，沿途可觀賞維港及九龍半島的景色。
+
+難度:　2 / 5
+風景:　4 / 5
+路線:　山頂廣場 - 盧吉道 - 夏力道 - 薄扶林家樂徑 - 薄扶林水塘道
+需時:　2 小時
+長度:　7 公里
+
+起點交通: 
+1. 新巴 15: 中環(交易廣場) - 山頂 (山頂 下車)
+2. 小巴 1: 中環(香港站) - 山頂 (山頂 下車)
+
+終點交通: 
+1. 新巴 4: 中環天星碼頭 - 華富(南)
+2. 城巴 973: 尖沙嘴(東) - 赤柱
+
+
+港島徑二段
+
+港島徑二段由途徑港島首個落成的薄扶林水塘及香港歷史最悠久的公眾騎術學校。
+
+難度:　2 / 5
+風景:　3 / 5
+路線:　薄扶林水塘道 - 引水道 - 貝璐道
+需時:　1.5 小時
+長度:　4.5 公里
+
+起點交通: 
+1. 新巴 4: 中環天星碼頭 - 華富(南) (薄扶林水塘道 下車)
+2. 城巴 973: 尖沙嘴(東) - 赤柱 (薄扶林水塘道 下車)
+3. 新巴 90B: 海怡半島 - 金鐘鐵路站 (薄扶林水塘道 下車)
+
+終點交通: 
+1. 新巴 38: 置富花園 - 北角碼頭
+2. 新巴 70: 香港仔 - 中環(交易廣場)
+
+
+
+
+港島徑三段
+
+港島徑三段經過香港仔水塘道到達灣仔峽，沿途可欣賞到港島區最後建成的水塘：香港仔下水塘及香港仔上水塘。
+
+難度:　2 / 5
+風景:　3 / 5
+路線:　貝璐道 - 香港仔郊野公園 - 香港仔水塘道
+需時:　1.75 小時
+長度:　6.5 公里
+
+起點交通: 
+1. 城巴 7: 中環碼頭 - 香港仔石排灣 (香港仔水塘道 下車)
+2. 城巴 76: 香港仔石排灣 - 銅鑼灣(摩頓台) (香港仔水塘道 下車)
+
+終點交通: 
+1. 新巴 15: 中環(交易廣場) - 山頂
+
+
+
+
+
+港島徑四段
+
+港島徑四段走入灣仔峽的一片密林，沿途會經過多條英式古橋。
+
+難度:　2 / 5
+風景:　2 / 5
+路線:　香港仔水塘道 - 中峽道 - 中峽 - 黃泥涌峽
+需時:　2 小時
+長度:　7.5 公里
+
+起點交通: 
+1. 新巴 15: 中環(交易廣場) - 山頂 (灣仔峽道 下車)
+
+終點交通: 
+1. 城巴 6: 赤柱監獄 - 中環 (交易廣場)
+2. 城巴 76: 石排灣 - 銅鑼灣 (摩頓台)
+
+
+港島徑五段
+
+港島徑五段與衛奕信徑二段重疊，途經渣甸山頂，可欣賞到大潭谷水塘以及繁華鬧市之景。
+
+難度:　3 / 5
+風景:　3 / 5
+路線:　黃泥涌峽 - 陽明山莊 - 渣甸山 - 畢拿山 - 柏架山道
+需時:　1.5 小時
+長度:　4 公里
+
+起點交通: 
+1. 城巴 6: 赤柱監獄 - 中環 (交易廣場) (黃泥涌水塘公園 下車)
+
+終點交通: 
+1. 無
+
+
+港島徑六段
+
+港島徑六段行經大潭水塘，前往大潭篤水塘的一段路兩旁種滿楠樹，令夏日暑氣大減，有「冷氣走廊」之稱。
+
+難度:　1 / 5
+風景:　2 / 5
+路線:　柏架山道 - 大潭水塘 - 大潭道
+需時:　1.5 小時
+長度:　4.5 公里
+
+起點交通: 
+1. 無
+
+終點交通: 
+1. 新巴 14: 赤柱炮台 - 愛秩序灣
+
+
+港島徑七段
+
+港島徑七段沿大潭東引水道行走，環繞大潭港而行。
+
+難度:　1 / 5
+風景:　2 / 5
+路線:　大潭道 - 爛泥灣村 - 東丫村 - 東丫背村 - 銀坑村 - 土地灣
+需時:　1.5 小時
+長度:　4.5 公里
+
+起點交通: 
+1. 新巴 14: 赤柱炮台 - 愛秩序灣 (大潭道 下車)
+2. 小巴 16M: 舂坎角 - 柴灣鐵路站 (大潭道 下車)
+
+終點交通: 
+1. 新巴 9: 筲箕灣 - 石澳
+
+
+港島徑八段
+
+港島徑八段經過著名的龍脊，龍脊被時代周刊亞洲版選為為亞洲區的「最佳市區遠足徑」，可見其風景之美。
+
+難度:　2 / 5
+風景:　4 / 5
+路線:　土地灣 - 打爛埕頂山 - 龍脊 - 馬塘坳 - 大浪灣
+需時:　3 小時
+長度:　8.5 公里
+
+起點交通: 
+1. 新巴 9: 筲箕灣 - 石澳 (土地灣 下車)
+
+終點交通: 
+1. 新巴 9: 筲箕灣 - 石澳
+</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tcQ-qc-v9x" firstAttribute="centerX" secondItem="YoK-lP-wKa" secondAttribute="centerX" id="3Qe-VU-M01"/>
+                                    <constraint firstAttribute="trailing" secondItem="tcQ-qc-v9x" secondAttribute="trailing" id="Msr-xg-2YX"/>
+                                    <constraint firstItem="tcQ-qc-v9x" firstAttribute="leading" secondItem="YoK-lP-wKa" secondAttribute="leading" id="feu-vN-afH"/>
+                                    <constraint firstAttribute="bottom" secondItem="tcQ-qc-v9x" secondAttribute="bottom" constant="-17" id="j86-Dl-8U5"/>
+                                    <constraint firstItem="tcQ-qc-v9x" firstAttribute="top" secondItem="YoK-lP-wKa" secondAttribute="topMargin" id="uBG-Nk-zWE"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YoK-lP-wKa" firstAttribute="leading" secondItem="X42-W6-fxe" secondAttribute="leading" id="Y2c-Ru-x9Z"/>
+                            <constraint firstItem="YoK-lP-wKa" firstAttribute="top" secondItem="X3R-fD-Yfp" secondAttribute="bottom" constant="101" id="Zzq-wM-KGI"/>
+                            <constraint firstItem="YoK-lP-wKa" firstAttribute="leading" secondItem="uRj-Kq-IVr" secondAttribute="leading" id="aQT-DT-GPX"/>
+                            <constraint firstItem="YoK-lP-wKa" firstAttribute="trailing" secondItem="uRj-Kq-IVr" secondAttribute="trailing" id="dFf-h7-wDY"/>
+                            <constraint firstAttribute="trailing" secondItem="YoK-lP-wKa" secondAttribute="trailing" id="fXH-lQ-BeX"/>
+                            <constraint firstItem="YoK-lP-wKa" firstAttribute="leading" secondItem="kUl-9X-daU" secondAttribute="leading" id="g09-7H-YcF"/>
+                            <constraint firstItem="uRj-Kq-IVr" firstAttribute="top" secondItem="kUl-9X-daU" secondAttribute="top" id="loU-yl-b4D"/>
+                            <constraint firstItem="YoK-lP-wKa" firstAttribute="centerX" secondItem="Boj-H3-7tU" secondAttribute="centerX" id="nbv-vr-OAC"/>
+                            <constraint firstItem="X42-W6-fxe" firstAttribute="top" secondItem="YoK-lP-wKa" secondAttribute="bottom" constant="8" symbolic="YES" id="qbB-WE-nvr"/>
+                            <constraint firstItem="Boj-H3-7tU" firstAttribute="top" secondItem="X42-W6-fxe" secondAttribute="bottom" constant="19" id="wCX-kH-kLd"/>
+                            <constraint firstItem="YoK-lP-wKa" firstAttribute="trailing" secondItem="X42-W6-fxe" secondAttribute="trailing" id="wLJ-Ap-rjw"/>
+                            <constraint firstAttribute="bottom" secondItem="YoK-lP-wKa" secondAttribute="bottom" constant="225" id="ylp-ro-tn1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hkCover" destination="uRj-Kq-IVr" id="06w-Pi-g47"/>
+                        <outlet property="hkMapView" destination="X42-W6-fxe" id="DpE-KK-Rdh"/>
+                        <outlet property="hkScrollView" destination="YoK-lP-wKa" id="8rI-Zs-g0S"/>
+                        <outlet property="hkTextView" destination="tcQ-qc-v9x" id="AiV-GS-WUF"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gcq-Xh-n46" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRB-EN-7VK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="-1004"/>
+            <point key="canvasLocation" x="1351" y="-1004"/>
+        </scene>
+        <!--Fw View Controller-->
+        <scene sceneID="KOl-qX-meV">
+            <objects>
+                <viewController id="p2G-xz-U6a" customClass="fwViewController" customModule="HikingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w8D-yt-bRf"/>
+                        <viewControllerLayoutGuide type="bottom" id="dZb-td-F84"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cHX-xR-SG2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0928B-鳳凰徑第八段-至分流-28" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-fM-vYF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="2cT-zU-nQB"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGn-cl-CPd">
+                                <rect key="frame" x="0.0" y="450" width="375" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="veD-AX-Og4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzy-I0-Fdf">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <state key="normal" title="上一頁"/>
+                                <connections>
+                                    <action selector="fwBackBtn:" destination="p2G-xz-U6a" eventType="touchUpInside" id="NQY-vd-R51"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLr-G7-2vo">
+                                <rect key="frame" x="0.0" y="121" width="375" height="321"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BFe-9D-haB">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="330"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="330" id="SUl-8g-Qj7"/>
+                                        </constraints>
+                                        <mutableString key="text">鳳凰徑一段
+
+鳳凰徑一段由梅窩碼頭至南山，全長只有2.5公里，途中會經過一些村落及燒烤場地。
+
+難度:　1 / 5
+風景:　1 / 5
+路線:　梅窩碼頭 - 嶼南道 - 南山
+需時:　0.75 小時
+長度:　2.5 公里
+
+起點交通: 
+1. 中環港外線6號碼頭
+
+終點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳
+2. 大嶼山巴士 2: 梅窩 - 昂平
+3. 大嶼山巴士 3M: 梅窩 - 東涌市中心
+4. 大嶼山巴士 4: 梅窩 - 塘福
+
+
+鳳凰徑二段
+
+鳳凰徑二段走過大東山，山上有大幅草地及一座座石屋，是觀賞日出日落的熱門地點。
+
+難度:　3 / 5
+風景:　4 / 5
+路線:　南山 - 雙東坳 - 大東山 - 伯公坳
+需時:　2.75 小時
+長度:　6.5 公里
+
+起點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳 (南山 下車)
+2. 大嶼山巴士 2: 梅窩 - 昂平 (南山 下車)
+3. 大嶼山巴士 3M: 梅窩 - 東涌市中心 (南山 下車)
+4. 大嶼山巴士 4: 梅窩 - 塘福 (南山 下車)
+
+終點交通: 
+1. 大嶼山巴士 3M: 梅窩 - 東涌市中心
+2. 大嶼山巴士 11: 大澳 - 東涌市中心
+
+
+鳳凰徑三段
+
+鳳凰徑三段由伯公坳登上觀賞日出熱門地點鳳凰山，然後行走天梯下降至昂坪。
+
+難度:　3 / 5
+風景:　4 / 5
+路線:　伯公坳 - 鳳凰山 - 天梯 - 昂坪
+需時:　2.15 小時
+長度:　4.5 公里
+
+起點交通: 
+1. 大嶼山巴士 3M: 梅窩 - 東涌市中心 (伯公坳 下車)
+2. 大嶼山巴士 11: 大澳 - 東涌市中心 (伯公坳 下車)
+
+終點交通: 
+1. 大嶼山巴士 2: 梅窩 - 昂平
+2. 大嶼山巴士 23: 東涌市中心 - 昂平
+
+
+
+
+鳳凰徑四段
+
+鳳凰徑四段由鳳凰觀日開始，途經心經簡林，沿著石壁水塘的北坡走。
+
+難度:　3 / 5
+風景:　3 / 5
+路線:　昂坪 - 昂坪路 - 大風坳 - 深屈道
+需時:　1.25 小時
+長度:　4 公里
+
+起點交通: 
+1. 大嶼山巴士 2: 梅窩 - 昂平 (昂平 下車)
+2. 大嶼山巴士 23: 東涌市中心 - 昂平 (昂平 下車)
+
+終點交通: 
+1. 大嶼山巴士 2: 梅窩 - 昂平
+2. 大嶼山巴士 23: 東涌市中心 - 昂平
+
+
+
+鳳凰徑五段
+
+鳳凰徑五段以龍仔悟園為終點。龍仔悟園原為一條小村，後來被收購此地並興建龍仔悟園。
+
+難度:　3 / 5
+風景:　3 / 5
+路線:　深屈道 - 觀音山 - 羌山 - 靈會山 - 分水坳 - 萬丈布 - 龍仔悟園
+需時:　2.75 小時
+長度:　7.5 公里
+
+起點交通: 
+1. 大嶼山巴士 2: 梅窩 - 昂平 (深屈道 下車)
+2. 大嶼山巴士 23: 東涌市中心 - 昂平 (深屈道 下車)
+
+終點交通: 
+1. 無
+
+
+鳳凰徑六段
+
+鳳凰徑六段由龍仔悟園出發，前往以水上棚屋聞名的大澳。
+
+難度:　2 / 5
+風景:　3 / 5
+路線:　龍仔悟園 - 南山村 - 大澳
+需時:　1 小時
+長度:　2.5 公里
+
+起點交通: 
+1. 無
+
+終點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳
+2. 大嶼山巴士 11: 東涌市中心 - 大澳
+
+鳳凰徑七段
+
+鳳凰徑七段沿大嶼山西南海岸行走，可欣賞到香港最西南面的水域。如果幸運的話，更可看到中華白海豚的蹤影。
+
+難度:　3 / 5
+風景:　4 / 5
+路線:　大澳 - 二澳 - 根頭坳 - 響鐘坳 - 分流西灣 - 狗嶺涌
+需時:　3 小時
+長度:　10.5 公里
+
+起點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳 (大澳 下車)
+2. 大嶼山巴士 11: 東涌市中心 - 大澳 (大澳 下車)
+
+終點交通: 
+1. 無
+
+
+
+
+鳳凰徑八段
+
+鳳凰徑八段沿引水道走至石壁水塘，可欣賞到南方海岸景色。
+
+難度:　3 / 5
+風景:　3 / 5
+路線:　狗嶺涌 - 大浪灣 - 石壁
+需時:　1.5 小時
+長度:　5.5 公里
+
+起點交通: 
+1. 無
+
+終點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳
+2. 大嶼山巴士 11: 東涌市中心 - 大澳
+
+
+
+
+鳳凰徑九段
+
+鳳凰徑九段由石壁水塘出發走至水口村，途中會經過石欖洲營地，可眺望香港最西南面的一些島嶼群，如索罟群島。
+
+難度:　2 / 5
+風景:　3 / 5
+路線:　石壁 - 東灣 - 石欖洲 - 水口
+需時:　2 小時
+長度:　6.5 公里
+
+起點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳 (石壁水塘 下車)
+2. 大嶼山巴士 11: 東涌市中心 - 大澳 (石壁水塘 下車)
+
+終點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳
+2. 大嶼山巴士 11: 東涌市中心 - 大澳
+
+
+
+
+鳳凰徑十段
+
+鳳凰徑十段大部份在引水道行走，沿途可欣賞到大嶼山的兩個海灘：塘福、長沙。
+
+難度:　2 / 5
+風景:　3 / 5
+路線:　水口 - 東涌道
+需時:　2 小時
+長度:　6.5 公里
+
+起點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳 (水口村 下車)
+2. 大嶼山巴士 11: 東涌市中心 - 大澳 (水口村 下車)
+
+終點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳
+2. 大嶼山巴士 11: 東涌市中心 - 大澳
+
+
+
+鳳凰徑十一段
+
+鳳凰徑十一段主要在引水道行走，可俯瞰整條長沙上村。
+
+難度:　2 / 5
+風景:　3 / 5
+路線:　東涌道 - 貝澳
+需時:　1.25 小時
+長度:　4.5 公里
+
+起點交通: 
+1. 大嶼山巴士 3M: 梅窩 - 東涌市中心 (新東涌道 下車)
+2. 大嶼山巴士 11: 東涌市中心 - 大澳 (新東涌道 下車)
+
+終點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳
+2. 大嶼山巴士 3M: 梅窩 - 東涌市中心
+
+
+
+鳳凰徑十二段
+
+鳳凰徑十二段是鳳凰徑的最後一段，終點是第一段的起點梅窩碼頭，沿途可以欣賞到芝麻灣半島。
+
+難度:　3 / 5
+風景:　3 / 5
+路線:　貝澳 - 鹹田村 - 芝麻灣道 - 大牛湖頂 - 梅窩
+需時:　3 小時
+長度:　9 公里
+
+起點交通: 
+1. 大嶼山巴士 1: 梅窩 - 大澳 (貝澳 下車)
+2. 大嶼山巴士 3M: 梅窩 - 東涌市中心 (貝澳 下車)
+
+終點交通: 
+1. 梅窩碼頭渡輪
+</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BFe-9D-haB" firstAttribute="leading" secondItem="DLr-G7-2vo" secondAttribute="leading" id="6Dw-GE-oy3"/>
+                                    <constraint firstAttribute="bottom" secondItem="BFe-9D-haB" secondAttribute="bottom" constant="-17" id="Cyg-3r-K6M"/>
+                                    <constraint firstItem="BFe-9D-haB" firstAttribute="top" secondItem="DLr-G7-2vo" secondAttribute="topMargin" id="fh9-86-uKF"/>
+                                    <constraint firstAttribute="trailing" secondItem="BFe-9D-haB" secondAttribute="trailing" id="jMb-o2-HEn"/>
+                                    <constraint firstItem="BFe-9D-haB" firstAttribute="centerX" secondItem="DLr-G7-2vo" secondAttribute="centerX" id="oGE-mQ-Ux2"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DLr-G7-2vo" secondAttribute="bottom" constant="225" id="5cF-M2-ii7"/>
+                            <constraint firstItem="DLr-G7-2vo" firstAttribute="leading" secondItem="cHX-xR-SG2" secondAttribute="leading" id="B34-kh-Bmn"/>
+                            <constraint firstItem="DLr-G7-2vo" firstAttribute="centerX" secondItem="Vzy-I0-Fdf" secondAttribute="centerX" id="Cnr-rZ-s74"/>
+                            <constraint firstItem="DLr-G7-2vo" firstAttribute="trailing" secondItem="Bic-fM-vYF" secondAttribute="trailing" id="Mfz-aa-qjw"/>
+                            <constraint firstItem="DLr-G7-2vo" firstAttribute="leading" secondItem="Bic-fM-vYF" secondAttribute="leading" id="Py0-KJ-fjF"/>
+                            <constraint firstItem="Vzy-I0-Fdf" firstAttribute="top" secondItem="OGn-cl-CPd" secondAttribute="bottom" constant="19" id="QxW-XP-rbS"/>
+                            <constraint firstItem="DLr-G7-2vo" firstAttribute="leading" secondItem="OGn-cl-CPd" secondAttribute="leading" id="UmC-5w-yxO"/>
+                            <constraint firstItem="DLr-G7-2vo" firstAttribute="trailing" secondItem="OGn-cl-CPd" secondAttribute="trailing" id="bgJ-CN-95b"/>
+                            <constraint firstItem="OGn-cl-CPd" firstAttribute="top" secondItem="DLr-G7-2vo" secondAttribute="bottom" constant="8" symbolic="YES" id="bsl-xs-O6n"/>
+                            <constraint firstAttribute="trailing" secondItem="DLr-G7-2vo" secondAttribute="trailing" id="ghz-TO-Tl7"/>
+                            <constraint firstItem="Bic-fM-vYF" firstAttribute="top" secondItem="cHX-xR-SG2" secondAttribute="top" id="lJa-mc-P3f"/>
+                            <constraint firstItem="DLr-G7-2vo" firstAttribute="top" secondItem="w8D-yt-bRf" secondAttribute="bottom" constant="101" id="p9h-A1-QWo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fwCover" destination="Bic-fM-vYF" id="qfn-Rt-cL5"/>
+                        <outlet property="fwMapView" destination="OGn-cl-CPd" id="lmf-iA-jHJ"/>
+                        <outlet property="fwScrollView" destination="DLr-G7-2vo" id="5Gx-zt-DjI"/>
+                        <outlet property="fwTextView" destination="BFe-9D-haB" id="2Pp-nL-y0e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7J-ib-OGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2070" y="-1004"/>
         </scene>
     </scenes>
     <resources>
+        <image name="0928B-鳳凰徑第八段-至分流-28" width="500" height="281"/>
+        <image name="Image004" width="1920" height="1080"/>
         <image name="sketch-1510659648213" width="1440" height="1080"/>
+        <image name="衛奕信cover" width="1920" height="838"/>
+        <image name="遠足" width="1920" height="1065"/>
     </resources>
 </document>

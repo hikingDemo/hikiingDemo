@@ -133,6 +133,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreLocation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -152,25 +153,62 @@ SWIFT_CLASS("_TtC10HikingDemo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC10HikingDemo24SafariPageViewController")
-@interface SafariPageViewController : UIViewController
+SWIFT_CLASS("_TtC10HikingDemo14ViewController")
+@interface ViewController : UIViewController
+- (IBAction)mapPageBtn:(UIButton * _Nonnull)sender;
+- (IBAction)weatherPageBtn:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIButton;
+@class UIImageView;
+@class UIScrollView;
+@class UITextView;
 
-SWIFT_CLASS("_TtC10HikingDemo14ViewController")
-@interface ViewController : UIViewController
-- (IBAction)mapPageBtn:(UIButton * _Nonnull)sender;
-- (IBAction)weatherPageBtn:(UIButton * _Nonnull)sender;
-- (IBAction)safariPageBtn:(UIButton * _Nonnull)sender;
-- (IBAction)sosPageBtn:(UIButton * _Nonnull)sender;
+SWIFT_CLASS("_TtC10HikingDemo16fwViewController")
+@interface fwViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified fwCover;
+@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified fwScrollView;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified fwTextView;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified fwMapView;
+- (IBAction)fwBackBtn:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MKMapView;
+@class UILabel;
+@class CLLocationManager;
+@class CLLocation;
+
+SWIFT_CLASS("_TtC10HikingDemo17gpsViewController")
+@interface gpsViewController : UIViewController <CLLocationManagerDelegate>
+@property (nonatomic, strong) IBOutlet MKMapView * _Null_unspecified mapView;
+@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified statusLabel;
+@property (nonatomic, readonly, strong) CLLocationManager * _Nonnull manager;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10HikingDemo16hkViewController")
+@interface hkViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified hkCover;
+@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified hkScrollView;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified hkTextView;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified hkMapView;
+- (IBAction)hkViewBackBtn:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -180,6 +218,26 @@ SWIFT_CLASS("_TtC10HikingDemo14ViewController")
 
 SWIFT_CLASS("_TtC10HikingDemo17mapViewController")
 @interface mapViewController : UIViewController
+- (IBAction)mlhMainBtn:(UIButton * _Nonnull)sender;
+- (IBAction)wysMainBtn:(UIButton * _Nonnull)sender;
+- (IBAction)hkMainBtn:(UIButton * _Nonnull)sender;
+- (IBAction)fwMainBtn:(UIButton * _Nonnull)sender;
+- (IBAction)gpsMainBtn:(UIButton * _Nonnull)sender;
+- (IBAction)backToMainPageBtn:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10HikingDemo17mlhViewController")
+@interface mlhViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified mlhCoverView;
+- (IBAction)backBtn:(UIButton * _Nonnull)sender;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified mlhMapView;
+@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified mlhScrollView;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified mlhTextView;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -189,6 +247,20 @@ SWIFT_CLASS("_TtC10HikingDemo17mapViewController")
 
 SWIFT_CLASS("_TtC10HikingDemo21weatherViewController")
 @interface weatherViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10HikingDemo17wysViewController")
+@interface wysViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified wysCover;
+@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified wysScrollView;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified wysTextView;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified wysMapView;
+- (IBAction)wysBackBtn:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

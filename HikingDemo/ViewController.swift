@@ -11,15 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func mapPageBtn(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "mapClick", sender: nil)
     }
     
     @IBAction func weatherPageBtn(_ sender: UIButton) {
-    }
-    
-    @IBAction func safariPageBtn(_ sender: UIButton) {
-    }
-    
-    @IBAction func sosPageBtn(_ sender: UIButton) {
     }
     
     override func viewDidLoad() {
