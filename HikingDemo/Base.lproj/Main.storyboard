@@ -22,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeE-XH-j96">
-                                <rect key="frame" x="25" y="411" width="325" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeE-XH-j96">
+                                <rect key="frame" x="133" y="347" width="109" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Weather"/>
                                 <connections>
@@ -32,9 +31,8 @@
                                     <segue destination="goj-M7-jxJ" kind="presentation" identifier="" id="nfn-eL-JdY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-7p-bZa">
-                                <rect key="frame" x="85" y="177" width="204" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-7p-bZa">
+                                <rect key="frame" x="142.5" y="177" width="89" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="遠足徑"/>
                                 <connections>
@@ -43,6 +41,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pk4-7p-bZa" secondAttribute="trailing" constant="127.5" id="2Tp-Af-Vm0"/>
+                            <constraint firstItem="oeE-XH-j96" firstAttribute="top" secondItem="pk4-7p-bZa" secondAttribute="bottom" constant="123" id="C1z-6x-yP5"/>
+                            <constraint firstItem="pk4-7p-bZa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="126.5" id="PEk-J8-zTN"/>
+                            <constraint firstItem="oeE-XH-j96" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mpu-O2-szl"/>
+                            <constraint firstItem="pk4-7p-bZa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="157" id="qsE-dV-nyI"/>
+                            <constraint firstItem="oeE-XH-j96" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="117" id="rcd-E0-5GQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oeE-XH-j96" secondAttribute="bottom" constant="273" id="sMv-jS-UEy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oeE-XH-j96" secondAttribute="trailing" constant="117" id="vdP-pd-YsJ"/>
+                            <constraint firstItem="pk4-7p-bZa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x5D-Ps-yPq"/>
+                            <constraint firstItem="oeE-XH-j96" firstAttribute="top" secondItem="pk4-7p-bZa" secondAttribute="bottom" constant="123" id="xj5-Z1-LZr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,7 +95,7 @@
                                     <constraint firstAttribute="height" constant="125" id="Hzz-cn-wI5"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gbd-3G-h6E">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="麥理浩徑地圖" translatesAutoresizingMaskIntoConstraints="NO" id="Gbd-3G-h6E">
                                 <rect key="frame" x="0.0" y="450" width="375" height="148"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="Szu-4r-ncW"/>
@@ -499,22 +509,10 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Osh-4x-WSR">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qO-Nk-qeg">
-                                <rect key="frame" x="161.5" y="538" width="51.5" height="79"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="QeQ-Fh-W5G"/>
-                                    <constraint firstAttribute="width" constant="51.5" id="TOu-Sy-eEO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Osh-4x-WSR" secondAttribute="trailing" id="6al-RX-MmR"/>
-                            <constraint firstItem="6Nh-9x-Yuz" firstAttribute="top" secondItem="8qO-Nk-qeg" secondAttribute="bottom" constant="50" id="C7s-MW-Ciu"/>
-                            <constraint firstItem="8qO-Nk-qeg" firstAttribute="centerX" secondItem="xuw-SS-T1V" secondAttribute="centerX" id="GBk-HO-Rva"/>
                             <constraint firstItem="6Nh-9x-Yuz" firstAttribute="top" secondItem="Osh-4x-WSR" secondAttribute="bottom" id="g43-uk-v1L"/>
                             <constraint firstItem="Osh-4x-WSR" firstAttribute="top" secondItem="RXq-UC-UTe" secondAttribute="bottom" id="qV2-E2-abd"/>
                             <constraint firstItem="Osh-4x-WSR" firstAttribute="leading" secondItem="xuw-SS-T1V" secondAttribute="leading" id="ybv-4v-kgC"/>
@@ -522,7 +520,6 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="Osh-4x-WSR" id="U3J-Jf-DYM"/>
-                        <outlet property="statusLabel" destination="8qO-Nk-qeg" id="3MZ-DM-Htq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvS-d5-h8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -547,7 +544,7 @@
                                     <constraint firstAttribute="height" constant="125" id="EmV-N2-ysR"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-py-GqJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="衛奕信徑地圖" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-py-GqJ">
                                 <rect key="frame" x="0.0" y="450" width="375" height="148"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="H9F-9O-o11"/>
@@ -885,7 +882,7 @@
                                     <constraint firstAttribute="height" constant="125" id="lwU-HB-R2r"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X42-W6-fxe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="港島徑地圖" translatesAutoresizingMaskIntoConstraints="NO" id="X42-W6-fxe">
                                 <rect key="frame" x="0.0" y="450" width="375" height="148"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="bT8-Ho-K79"/>
@@ -1113,7 +1110,7 @@
                                     <constraint firstAttribute="height" constant="125" id="2cT-zU-nQB"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGn-cl-CPd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="鳳凰徑地圖" translatesAutoresizingMaskIntoConstraints="NO" id="OGn-cl-CPd">
                                 <rect key="frame" x="0.0" y="450" width="375" height="148"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="veD-AX-Og4"/>
@@ -1415,7 +1412,11 @@
         <image name="0928B-鳳凰徑第八段-至分流-28" width="500" height="281"/>
         <image name="Image004" width="1920" height="1080"/>
         <image name="sketch-1510659648213" width="1440" height="1080"/>
+        <image name="港島徑地圖" width="600" height="356"/>
         <image name="衛奕信cover" width="1920" height="838"/>
+        <image name="衛奕信徑地圖" width="1190" height="850"/>
         <image name="遠足" width="1920" height="1065"/>
+        <image name="鳳凰徑地圖" width="1643" height="854"/>
+        <image name="麥理浩徑地圖" width="599" height="383"/>
     </resources>
 </document>

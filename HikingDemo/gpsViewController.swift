@@ -29,9 +29,6 @@ class gpsViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(region, animated: true)
         
         self.mapView.showsUserLocation = true
-        
-        statusLabel.text = "\(location.speed)"
-        
     }
     
     

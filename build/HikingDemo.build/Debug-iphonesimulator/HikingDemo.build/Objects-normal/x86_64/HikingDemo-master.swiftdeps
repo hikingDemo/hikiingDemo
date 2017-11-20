@@ -1,13 +1,13 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
 options: "d06b88c5717fc59645ae9e5d751342b8"
-build_time: [564417660, 515194000]
+build_time: [564449925, 208063000]
 inputs:
   "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/hkViewController.swift": [564338622, 0]
   "/Users/apple/Desktop/ios homework/HikingDemo/mapViewController.swift": [564339948, 0]
   "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/ViewController.swift": [564333941, 0]
   "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/weatherViewController.swift": [563870535, 0]
   "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/mlhViewController.swift": [564335956, 0]
-  "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/gpsViewController.swift": [564417659, 0]
+  "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/gpsViewController.swift": [564449924, 0]
   "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/fwViewController.swift": [564338622, 0]
   "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/wysViewController.swift": [564338622, 0]
   "/Users/apple/Desktop/ios homework/HikingDemo/HikingDemo/AppDelegate.swift": [563371635, 0]
